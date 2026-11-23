@@ -5,4 +5,7 @@
             <solid android:color="#FF0B1120" />
         </shape>
     </item>
+    <item
+        android:drawable="@drawable/ic_launcher_foreground"
+        android:gravity="center" />
 </layer-list>
