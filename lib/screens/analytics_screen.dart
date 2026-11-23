@@ -103,9 +103,9 @@ class AnalyticsScreen extends StatelessWidget {
                     LayoutBuilder(
                       builder: (context, constraints) {
                         final pieWidget = categoryTotals.isEmpty
-                            ? Card(
+                            ? const Card(
                                 child: Padding(
-                                  padding: const EdgeInsets.all(AppSpacing.xl),
+                                  padding: EdgeInsets.all(AppSpacing.xl),
                                   child: EmptyStateView(
                                     icon: Icons.pie_chart_outline_rounded,
                                     title: 'No expenses in this month',
