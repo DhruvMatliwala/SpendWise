@@ -7,6 +7,7 @@ import '../providers/currency_provider.dart';
 import '../providers/expense_provider.dart';
 import '../providers/theme_provider.dart';
 import '../services/csv_export_service.dart';
+import '../widgets/spendwise_logo.dart';
 
 /// Application settings for base currency, live FX cache, theme, and CSV export.
 class SettingsScreen extends StatelessWidget {
@@ -280,6 +281,17 @@ class SettingsScreen extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+              ),
+              const SizedBox(height: AppSpacing.lg),
+              const Card(
+                child: ListTile(
+                  leading: SpendWiseLogo(size: 40),
+                  title: Text(
+                    'SpendWise v1.0.0',
+                    style: TextStyle(fontWeight: FontWeight.w700),
+                  ),
+                  subtitle: Text('Offline-First Expense & Budget Analytics'),
                 ),
               ),
             ],

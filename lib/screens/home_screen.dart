@@ -13,6 +13,7 @@ import '../widgets/add_edit_expense_sheet.dart';
 import '../widgets/category_filter_chips.dart';
 import '../widgets/empty_state_view.dart';
 import '../widgets/expense_card.dart';
+import '../widgets/spendwise_logo.dart';
 
 /// Primary expense ledger screen with month filter, search, alerts, and CSV export.
 class HomeScreen extends StatefulWidget {
@@ -99,9 +100,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'SpendWise',
-          style: TextStyle(fontWeight: FontWeight.w800),
+        title: const Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SpendWiseLogo(size: 30),
+            SizedBox(width: AppSpacing.sm),
+            Text(
+              'SpendWise',
+              style: TextStyle(fontWeight: FontWeight.w800),
+            ),
+          ],
         ),
         actions: [
           IconButton(
